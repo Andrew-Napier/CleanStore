@@ -19,7 +19,8 @@ protocol CreateOrderDisplayLogic: class
 
 class CreateOrderViewController: UITableViewController, CreateOrderDisplayLogic
 {
-  var interactor: CreateOrderBusinessLogic?
+    @IBOutlet var textFields: [UITextField]!
+    var interactor: CreateOrderBusinessLogic?
   var router: (NSObjectProtocol & CreateOrderRoutingLogic & CreateOrderDataPassing)?
 
   // MARK: Object lifecycle
