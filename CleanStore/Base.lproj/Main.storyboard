@@ -553,7 +553,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Create Order" id="Xbu-Cp-bFP"/>
                     <connections>
+                        <outlet property="expirationDatePicker" destination="zhR-Gl-ros" id="saR-fz-W2s"/>
                         <outlet property="expirationDateTextField" destination="g6g-Yc-Z3w" id="aa0-rw-mJ8"/>
+                        <outlet property="shippingMethodPicker" destination="snI-sY-pac" id="8P2-Xg-dFk"/>
                         <outlet property="shippingMethodTextField" destination="AKe-n7-g6v" id="CJO-n0-0TV"/>
                         <outletCollection property="textFields" destination="IQb-D9-f5e" collectionClass="NSMutableArray" id="Gtm-lO-bS1"/>
                         <outletCollection property="textFields" destination="VV1-Ef-sPq" collectionClass="NSMutableArray" id="Afl-aw-kYX"/>
@@ -571,6 +573,8 @@
                         <outletCollection property="textFields" destination="mZp-ZM-G4O" collectionClass="NSMutableArray" id="Sxo-kh-tWg"/>
                         <outletCollection property="textFields" destination="cDl-fD-H0d" collectionClass="NSMutableArray" id="6tr-FT-PX5"/>
                         <outletCollection property="textFields" destination="QVs-x9-WlF" collectionClass="NSMutableArray" id="CM9-jT-iN8"/>
+                        <outletCollection property="textFields" destination="AKe-n7-g6v" collectionClass="NSMutableArray" id="8M7-gw-rd8"/>
+                        <outletCollection property="textFields" destination="g6g-Yc-Z3w" collectionClass="NSMutableArray" id="Tdl-tO-NTU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKm-5K-3Le" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -580,10 +584,17 @@
                     <date key="date" timeIntervalSinceReferenceDate="573190519.74027205">
                         <!--2019-03-02 03:35:19 +0000-->
                     </date>
+                    <connections>
+                        <action selector="expirationDatePickerValueChanged:" destination="aYb-Fy-dwD" eventType="valueChanged" id="nwv-82-n9j"/>
+                    </connections>
                 </datePicker>
                 <pickerView contentMode="scaleToFill" id="snI-sY-pac">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="aYb-Fy-dwD" id="tTz-M5-aa2"/>
+                        <outlet property="delegate" destination="aYb-Fy-dwD" id="PWR-KU-xik"/>
+                    </connections>
                 </pickerView>
             </objects>
             <point key="canvasLocation" x="628" y="-589.65517241379314"/>
