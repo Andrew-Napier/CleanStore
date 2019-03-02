@@ -20,6 +20,8 @@ protocol CreateOrderDisplayLogic: class
 class CreateOrderViewController: UITableViewController, CreateOrderDisplayLogic
 {
     @IBOutlet var textFields: [UITextField]!
+    @IBOutlet weak var shippingMethodTextField: UITextField!
+    @IBOutlet weak var expirationDateTextField: UITextField!
     var interactor: CreateOrderBusinessLogic?
   var router: (NSObjectProtocol & CreateOrderRoutingLogic & CreateOrderDataPassing)?
 
